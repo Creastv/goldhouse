@@ -32,7 +32,6 @@ function enqueue_styles()
     // Custom styles
     wp_enqueue_style('style', $theme_uri  . '/assets/css/style.css');
     wp_enqueue_style('header', $theme_uri  . '/assets/css/header.css');
-    wp_enqueue_style('pzfd', $theme_uri  . '/assets/css/pzfd.css');
     wp_enqueue_style('title', $theme_uri  . '/assets/css/title.css');
     wp_enqueue_style('table', $theme_uri  . '/assets/css/table.css');
     wp_enqueue_style('filter', $theme_uri  . '/assets/css/filters.css');

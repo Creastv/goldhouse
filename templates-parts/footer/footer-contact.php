@@ -2,12 +2,27 @@
 $project_id = get_project_id_by_investment();
 $pin = get_template_directory_uri() . '/assets/img/map/map-marker-1.svg';
 if (is_singular('projekty')):
-    $map = get_field('map');
-    $mapPin = get_field('pin');
+
+    $checkMap = get_field('map');
+
+    if (!$checkMap) :
+        $mapPin = $checkMap;
+    else:
+        $map = get_field('map', 'options');
+    endif;
+
     if ($mapPin):
         $pin = "" . $mapPin . "";
     endif;
-    $content = get_field('content_contact') ?? '';
+
+    $chceckContent = get_field('content_contact');
+
+    if (!$chceckContent['tytul'] && !$chceckContent['opis']) :
+        // 
+        $content = get_field('content_contact', 'options');
+    else :
+        $content = get_field('content_contact');
+    endif;
     if ($content) :
         $label = $content['etykieta'] ?? '';
         $title = $content['tytul'] ?? '';
@@ -15,7 +30,14 @@ if (is_singular('projekty')):
 
     endif;
 
-    $contact = get_field('kontakt');
+    $checkContact = get_field('kontakt');
+
+    if (!$checkContact['nazwa'] && !$checkContact['adres']) :
+        $contact  = get_field('kontakt', 'options');
+    else :
+        $contact = $checkContact;
+    endif;
+
     if ($contact) :
         $logo = $contact['logo'] ?? '';
         $name = $contact['nazwa'] ?? '';
