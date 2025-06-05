@@ -62,7 +62,7 @@ endif;
                             'container'      => false,       // usuwa <div>
                         ));
                         ?>
-                        <p>&copy; 2025 ARIA Development - Wszelkie prawa zastrzeżone.</p>
+                        <p>&copy; 2025 GOLDHOUSE - Wszelkie prawa zastrzeżone.</p>
                     </div><!-- /.footer-bttm -->
                 </div><!-- /.col-12 -->
             </div><!-- /.row -->
