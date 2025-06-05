@@ -312,7 +312,7 @@ endif;
                 // Option 2: PNG Marker (external image)
                 const pngMarker = L.icon({
                     iconUrl: "<?php echo $pin; ?>",
-                    iconSize: [78, 81],
+                    iconSize: [22, 28],
                     iconAnchor: [40, 40],
                     popupAnchor: [-3, -76],
                 });
