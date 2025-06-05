@@ -313,7 +313,7 @@ endif;
                 const pngMarker = L.icon({
                     iconUrl: "<?php echo $pin; ?>",
                     iconSize: [22, 28],
-                    iconAnchor: [40, 40],
+                    // iconAnchor: [0, 0],
                     popupAnchor: [-3, -76],
                 });
 
