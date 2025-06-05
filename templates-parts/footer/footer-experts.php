@@ -46,7 +46,8 @@ $nextxperts = get_field('dodatkowi_specjalisci', 'options');
                                 <?php if ($logo) : ?>
                                     <?php echo wp_get_attachment_image($logo); ?>
                                 <?php else : ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/aria.png" alt="aria">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sm-Logo-GoldHouse-nowe.jpg"
+                                        alt="GoldHouse">
                                 <?php endif; ?>
                                 <?php if ($name) : ?>
                                     <span><?php echo $name; ?></span>
