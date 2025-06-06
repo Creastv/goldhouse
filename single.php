@@ -9,12 +9,7 @@ while (have_posts()) : the_post(); ?>
             <div class="row">-->
             <div class="col-12">
                 <div class="post-content">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <?php echo the_post_thumbnail('large', array(
-                            'alt' => get_the_title()
-                        )); ?>
-                        <br>
-                    <?php endif; ?>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news/1.png" alt="img">
                     <?php the_content(); ?>
                     <div class="custome-separator  sep-50"></div>
                 </div>
