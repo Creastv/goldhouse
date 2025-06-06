@@ -344,7 +344,15 @@
 
 .logo img {
   height: 100px;
-  padding: 10px;
+  /* padding: 10px; */
+  padding-top: 10px;
+}
+.shadow-sm .logo img{
+  height: 70px;
+  padding-top: 0;
+}
+.shadow-sm .header-top{
+  padding: 5px 0;
 }
 
 .header-bottom {
@@ -763,7 +771,10 @@
 .sticky-top.shadow-sm .logo .active {
   display: block;
 }
-
+  .nowa p{
+    margin: 0;
+    padding: 0;
+  }
 @media only screen and (max-width: 991px) {
   .hero-content {
     justify-content: start;
@@ -783,7 +794,7 @@
   }
 
   .logo img {
-    height: 36px;
+    /* height: 36px; */
   }
 
   .top-bar .me-3 {
