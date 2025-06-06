@@ -33,6 +33,7 @@
 .footer-right {
     display: flex;
     justify-content:flex-end;
+    gap:20px;
 }
 .footer-right h4 {
     font-size: var(--sm);
