@@ -512,7 +512,7 @@ jQuery(document).ready(function($) {
     });
 
     if (window.location.pathname.includes('/lokale')) {
-        const savedView = localStorage.getItem('lokaleView') || 'grid';
+        const savedView = localStorage.getItem('lokaleView') || 'table';
         if (savedView === 'table') {
             $('.switch-table').addClass('active');
             $('.switch-grid').removeClass('active');
@@ -525,8 +525,8 @@ jQuery(document).ready(function($) {
         // Jeśli nie jesteśmy na archive-lokale, ale mamy formularz filtrowania
         if ($('#lokale-results').length) {
             // Wymuś widok grid jako domyślny
-            $('.switch-grid').addClass('active');
-            $('.switch-table').removeClass('active');
+            $('.switch-table').addClass('active');
+            $('.switch-grid').removeClass('active');
 
             fetchLokale();
         }
