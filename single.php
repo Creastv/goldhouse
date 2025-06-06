@@ -10,7 +10,7 @@ while (have_posts()) : the_post(); ?>
             <div class="col-12">
                 <div class="post-content">
                     <?php if (has_post_thumbnail()) : ?>
-                        <?php echo the_post_thumbnail('medium', array(
+                        <?php echo the_post_thumbnail('large', array(
                             'alt' => get_the_title()
                         )); ?>
                     <?php endif; ?>
