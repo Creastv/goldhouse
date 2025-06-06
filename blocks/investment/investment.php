@@ -24,7 +24,9 @@ $investitions = get_field('inwestycje');
         <section class="investment-area">
             <div class="investment">
                 <div class="investment-img">
-                    <?php echo wp_get_attachment_image($img, 'full'); ?>
+                    <a href="<?php echo $link; ?>">
+                        <?php echo wp_get_attachment_image($img, 'full'); ?>
+                    </a>
                     <?php if (!empty($status)) : ?>
                         <div class="on-sale">
                             <span style="background-color: <?php echo $labelColor; ?>;"><?php echo $labelText; ?></span>
