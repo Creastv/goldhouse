@@ -25,7 +25,7 @@ $investitions = get_field('inwestycje');
             <div class="investment">
                 <div class="investment-img">
                     <a href="<?php echo $link; ?>">
-                        <?php echo wp_get_attachment_image($img, 'full'); ?>
+                        <?php echo wp_get_attachment_image($img, 'large'); ?>
                     </a>
                     <?php if (!empty($status)) : ?>
                         <div class="on-sale">
