@@ -1,5 +1,5 @@
 <div class="contact-me">
-    <a href="tel:787878778">
+    <a href="tel: +48 731 381 007">
         <svg width="97" height="97" viewBox="0 0 97 97" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g filter="url(#filter0_d_7783_4251)">
                 <rect x="18" y="14" width="61" height="61" rx="30.5" fill="#1A1A1A" />
