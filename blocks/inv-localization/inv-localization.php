@@ -47,9 +47,10 @@ endif;
     const olszankowaArea = L.circle([<?php echo $loc['lat']; ?>, <?php echo $loc['lng']; ?>], {
         // Adjusted longitude to move left
         radius: 500, // radius in meters
-        color: "#f8a13f",
-        fillColor: "#f8a13f",
-        fillOpacity: 0.15,
+        color: "#000",
+        fillColor: "#000",
+        fillOpacity: 0.1,
+        opacity: 0.215,
         weight: 1,
     }).addTo(map);
 
@@ -57,9 +58,10 @@ endif;
     const largerCircle = L.circle([<?php echo $loc['lat']; ?>, <?php echo $loc['lng']; ?>], {
         // Adjusted longitude to match inner circle
         radius: 1200,
-        color: "#f8a13f",
-        fillColor: "#f8a13f",
-        fillOpacity: 0.1,
+        color: "#000",
+        fillColor: "#000",
+        fillOpacity: 0.04,
+        opacity: 0.0615,
         weight: 1,
     }).addTo(map);
 
