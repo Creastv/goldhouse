@@ -274,7 +274,7 @@ endif;
             </div><!-- /.col-lg-6 -->
             <div class="col-lg-6">
                 <div class="contact-right">
-                    <?php get_template_part('templates-parts/parts/footer-form'); ?>
+                    <?php echo do_shortcode('[contact-form-7 id="f68e6b1" title="Formularz 1"]'); ?>
                 </div><!-- /.contact-right -->
             </div><!-- /.col-lg-6 -->
         </div><!-- /.row -->

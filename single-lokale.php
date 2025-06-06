@@ -170,7 +170,7 @@ while (have_posts()) : the_post(); ?>
                     <div class="contact-title">
                         <h3>Zapytaj o mieszkanie</h3>
                     </div>
-                    <?php get_template_part('templates-parts/parts/local-form'); ?>
+                    <?php echo do_shortcode('[contact-form-7 id="f68e6b1" title="Formularz 1"]'); ?>
                 </div>
             </div>
         </section>
