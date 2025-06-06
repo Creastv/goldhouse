@@ -24,7 +24,7 @@ while (have_posts()) : the_post(); ?>
                             <h4>Skontaktuj się z nami</h4>
                             <div>
                                 <div class="biuro-aria">
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/sm-Logo-GoldHouse-nowe.jpg"
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/sm-Logo-GoldHouse-nowe.jpg"
                                         alt="GOLDHOUS" />
                                     <span>GOLDHOUSE sp. z o.o.</span>
                                 </div>
