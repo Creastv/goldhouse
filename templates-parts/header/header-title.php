@@ -1,7 +1,7 @@
 <?php
 $display = get_field('wylacz_naglowek');
 $bgClass = "header-item-1";
-if (has_post_thumbnail()) {
+if (has_post_thumbnail() && !is_single()) {
     $image_url = get_the_post_thumbnail_url(get_the_ID(), 'full');
     $bgImage = 'style="background-image:url( ' . $image_url . ' ); "';
     $bgClass = "";

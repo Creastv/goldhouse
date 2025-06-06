@@ -9,9 +9,13 @@ while (have_posts()) : the_post(); ?>
             <div class="row">-->
             <div class="col-12">
                 <div class="post-content">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/home/news/1.png" alt="img">
-                    <?php the_content(); ?>
+
+                    <?php echo the_post_thumbnail('full', array(
+                        'alt' => get_the_title()
+                    )); ?>
                     <div class="custome-separator  sep-50"></div>
+                    <?php the_content(); ?>
+
                 </div>
                 <aside>
                     <div class="sticky-sidebar">
@@ -62,6 +66,7 @@ while (have_posts()) : the_post(); ?>
                                     </a>
                                 </div>
                             </div>
+                            <br>
                             <a href="#kontakt" class="bttn black-bttn">Skontaktuj się</a>
                         </div>
                     </div>
