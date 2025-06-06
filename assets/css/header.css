@@ -441,7 +441,7 @@
 
 
 .dropdown-menu {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.95);
   border: none;
   border-radius: 0;
   /* padding: 10px 0; */
@@ -461,8 +461,8 @@
 }
 
 .dropdown-item:hover {
-  background-color: rgba(240, 132, 26, 0.6);
-  color: var(--primary-color);
+  background-color: var(--main);
+  color: #fff;
 }
 
 .header-right {
@@ -904,7 +904,7 @@
   position: fixed;
 }
 
-.main-menu .active a, .sticky-top.no-title .main-menu .active a {
+.main-menu .active > a, .sticky-top.no-title .main-menu .active > a {
   color:var(--main);
 }
 @media only screen and (max-width: 991px) {
