@@ -104,7 +104,8 @@ table.dataTable.no-footer {
   top: 0;
   bottom: 0;
   right: 0;
-  background-image: linear-gradient(101deg, #e89e01 6%, #f6cb65 100%);
+  /* background-image: linear-gradient(101deg, #e89e01 6%, #f6cb65 100%); */
+   background-color: var(--main);
   border-radius: 12px;
   z-index: -1;
 }

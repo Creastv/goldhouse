@@ -612,8 +612,9 @@ top: 55px;
 
 .btn-outline-light::after {
   opacity: 0;
-  background-color: #ffff;
-  background-image: linear-gradient(101deg, #e89e01 6%, #f6cb65 100%);
+  /* background-color: #ffff;
+  background-image: linear-gradient(101deg, #e89e01 6%, #f6cb65 100%); */
+   background-color: var(--main);
   transition:
     opacity 0.3s ease-in-out,
     border 0.3s ease-in-out;
@@ -640,7 +641,8 @@ top: 55px;
   top: 0;
   bottom: 0;
   right: 0;
-  background-image: linear-gradient(101deg, #e89e01 6%, #f6cb65 100%);
+  /* background-image: linear-gradient(101deg, #e89e01 6%, #f6cb65 100%); */
+   background-color: var(--main);
   border-radius: 12px;
   z-index: -1;
 }
