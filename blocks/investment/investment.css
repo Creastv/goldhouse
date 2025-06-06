@@ -15,6 +15,7 @@
 .investment-img {
   width: 60%;
   position: relative;
+  min-height: 300px;
 }
 
 .investment-img::before {
@@ -31,6 +32,7 @@
 }
 
 .investment-img img {
+  position: absolute;
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
@@ -63,6 +65,8 @@
   width: 40%;
   padding-left: 60px;
   align-self: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .investment-text h3 {
@@ -165,6 +169,10 @@
   .customer-inner {
     flex-direction: column;
     gap: 30px;
+  }
+  .investment-text {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .customer-text,
   .customer-img {
