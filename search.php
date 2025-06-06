@@ -13,7 +13,8 @@
     <?php } ?>
 
 <?php else : ?>
-
+    <?php get_template_part('templates-parts/header/header', 'title-search');  ?>
+    <br>
     <div class="container no-resoult">
         <h2 class='text-center'><?php _e('Nic nie znaleziono', 'go'); ?></h2>
     </div>

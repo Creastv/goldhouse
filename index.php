@@ -18,7 +18,9 @@
 
 <?php else : ?>
     <heder class="entry-header">
-        <h1 class='text-center'><?php _e('Nic nie znaleziono', 'go'); ?></h1>
+        <?php get_template_part('templates-parts/header/header', 'title-blog'); ?>
+        <br>
+        <h1 class='text-center'><?php _e('Nic nie znaleziono', 'go'); ?></h2>
     </heder>
 <?php endif; ?>
 

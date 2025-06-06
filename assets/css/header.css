@@ -130,7 +130,7 @@
 
 .hero-content-flat {
   /* padding-top: 135px; */
-  padding-top: 170px;
+  padding-top: 220px;
   padding-bottom: 50px;
   min-height: 360px;
   position: relative;
@@ -795,8 +795,13 @@
 
   .logo img {
     /* height: 36px; */
+    padding-bottom: 10px;
   }
 
+.shadow-sm .logo img {
+    /* height: 36px; */
+    padding-bottom: 0px;
+  }
   .top-bar .me-3 {
     margin-right: 5px !important;
   }
