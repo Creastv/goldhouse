@@ -151,18 +151,6 @@ top: 55px;
   background-position: center;
   position: relative;
 }
-
-.slider-item-1 {
-  background-image: url("../img/home/banner.png");
-}
-
-.slider-item-2 {
-  background-image: url("../img/home/banner-2.png");
-}
-
-.slider-item-3 {
-  background-image: url("../img/home/banner.png");
-}
 .hero-section h1{
   text-transform: uppercase;
 }
@@ -174,7 +162,7 @@ top: 55px;
 }
 
 .header-item-1 {
-  background-image: url("../img/header/olszankowa-header.jpeg");
+  background-image: url("../img/bg-header.png");
   /* margin-bottom: 50px; */
 }
 
