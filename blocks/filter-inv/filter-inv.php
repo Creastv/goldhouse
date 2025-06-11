@@ -86,10 +86,10 @@
                                     <div class="d-flex flex-wrap gap-2">
 
                                         <?php foreach ($pokoje as $ilosc): ?>
-                                        <button class="room-btn btn btn-outline-secondary"
-                                            data-rooms="<?php echo esc_attr($ilosc); ?>">
-                                            <?php echo esc_html($ilosc); ?>
-                                        </button>
+                                            <button class="room-btn btn btn-outline-secondary"
+                                                data-rooms="<?php echo esc_attr($ilosc); ?>">
+                                                <?php echo esc_html($ilosc); ?>
+                                            </button>
                                         <?php endforeach; ?>
                                     </div>
                                 </div>
@@ -101,10 +101,10 @@
                                 <div class="filter-floors">
                                     <div class="d-flex flex-wrap gap-2">
                                         <?php for ($i = 0; $i <= 5; $i++): ?>
-                                        <button class="floor-btn btn btn-outline-secondary"
-                                            data-floor="<?php echo $i; ?>">
-                                            <?php echo $i; ?>
-                                        </button>
+                                            <button class="floor-btn btn btn-outline-secondary"
+                                                data-floor="<?php echo $i; ?>">
+                                                <?php echo $i; ?>
+                                            </button>
                                         <?php endfor; ?>
                                     </div>
                                 </div>
