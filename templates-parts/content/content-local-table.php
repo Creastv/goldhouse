@@ -6,6 +6,7 @@ $rooms = get_field('pokoje', get_the_ID());
 $balony = get_field('rozmiar_balkonu', get_the_ID());
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());
+$priceFull =  number_format($price, 0, '', ' ') . ' zł';
 $plan2d = get_field('rzut_2d', get_the_ID());
 $plan3d = get_field('rzut_3d', get_the_ID());
 $statusInfo = "";
@@ -52,8 +53,8 @@ if ($floor == 0) {
 
     </td>
     <td><a href="<?php the_permalink(); ?>" class="price-btn">Zapytaj o cenę</a></td>
-    <td class="hide-mobile">-</td>
-    <td class="hide-mobile">
+    <td class="hide-mobile" data-order="<?php echo esc_attr($price); ?>"><?php echo $price ? $priceFull  : "-"; ?></td>
+    <td class=" hide-mobile">
         <button class="favorite-btn grid-favorite-toggle" data-index="<?php echo get_the_ID(); ?>">
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill="#fff" ;

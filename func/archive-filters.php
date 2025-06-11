@@ -139,7 +139,7 @@ function ajax_filter_lokale()
 
         if ($view === 'table') {
             echo '<table id="dataTable" class="display" style="width:100%">';
-            echo '<thead><tr><th>Mieszkanie</th><th>Metraż</th><th>Piętro</th><th>Pokoje</th><th class="hide-mobile">Balkon/Ogródek</th><th>Status</th><th class="hide-mobile">Rzuty</th><th class="hide-mobile">Cena Mieszkania</th><th class="hide-mobile">Promocja</th><th class="hide-mobile">Ulubione</th></tr></thead><tbody>';
+            echo '<thead><tr><th>Mieszkanie</th><th>Metraż</th><th>Piętro</th><th>Pokoje</th><th class="hide-mobile">Balkon/Ogródek</th><th>Status</th><th class="hide-mobile">Rzuty</th><th class="hide-mobile">Cena Mieszkania</th><th class="hide-mobile">Cena</th><th class="hide-mobile">Ulubione</th></tr></thead><tbody>';
             while ($lokale->have_posts()) : $lokale->the_post();
                 get_template_part('templates-parts/content/content-local-table');
             endwhile;

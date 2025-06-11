@@ -202,7 +202,7 @@ jQuery(document).ready(function($) {
                 },
                 columnDefs: [{
                     orderable: false,
-                    targets: [6, 7, 8, 9],
+                    targets: [6, 7, 9],
                 }],
             });
         }
