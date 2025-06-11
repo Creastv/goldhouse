@@ -186,10 +186,10 @@ jQuery(document).ready(function($) {
     function initDataTableIfExists() {
         if (jQuery.fn.DataTable && jQuery("#dataTable").length) {
             jQuery("#dataTable").DataTable({
-                paging: true,
+                paging: false,
                 lengthChange: false,
                 scrollX: true,
-                pageLength: 100,
+                pageLength: -1,
                 searching: true,
                 ordering: true,
                 info: true,
