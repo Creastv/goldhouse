@@ -54,8 +54,8 @@ function ajax_filter_lokale()
 
     $args = [
         'post_type'      => 'lokale',
-        // 'posts_per_page' => ($view === 'grid') ? 12 : -1,
-        'posts_per_page' => ($view === 'grid') ? -1 : -1,
+        'posts_per_page' => ($view === 'grid') ? 12 : -1,
+        // 'posts_per_page' => ($view === 'grid') ? -1 : -1,
         'paged'          => $paged,
         'post_status'    => 'publish',
     ];
