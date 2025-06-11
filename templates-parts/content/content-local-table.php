@@ -53,7 +53,7 @@ if ($floor == 0) {
 
     </td>
     <td><a href="<?php the_permalink(); ?>" class="price-btn">Zapytaj o cenę</a></td>
-    <td class="hide-mobile" data-order="0">-<?php echo $price ? $price  : "-"; ?></td>
+    <td class="hide-mobile" data-order="">-<?php echo $price ? $price  : "-"; ?></td>
     <td class=" hide-mobile">
         <button class="favorite-btn grid-favorite-toggle" data-index="<?php echo get_the_ID(); ?>">
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
