@@ -87,7 +87,6 @@ endif;
                 position: [<?php echo $po['mapa']['lat']; ?>, <?php echo $po['mapa']['lng']; ?>],
                 icon: L.icon({
                     iconUrl: '<?php echo $po['ikona']; ?>',
-                    iconSize: [32, 45],
                     iconAnchor: [12, 41],
                     popupAnchor: [0, -41]
                 })

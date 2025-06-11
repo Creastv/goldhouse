@@ -23,10 +23,9 @@ $investitions = get_field('inwestycje');
     ?>
         <section class="investment-area">
             <div class="investment">
-                <div class="investment-img">
-                    <a href="<?php echo $link; ?>">
-                        <?php echo wp_get_attachment_image($img, 'medium_large'); ?>
-                    </a>
+                <a href="<?php echo $link; ?>" class="investment-img">
+                    <?php echo wp_get_attachment_image($img, 'medium_large'); ?>
+
                     <?php if (!empty($status)) : ?>
                         <div class="on-sale">
                             <span style="background-color: <?php echo $labelColor; ?>;"><?php echo $labelText; ?></span>
@@ -34,12 +33,12 @@ $investitions = get_field('inwestycje');
                     <?php endif; ?>
                     <?php if (!empty($logoLg)) : ?>
                         <div class="inves-icon">
-                            <a href="<?php echo $link; ?>">
-                                <?php echo wp_get_attachment_image($logoLg, 'medium'); ?>
-                            </a>
+
+                            <?php echo wp_get_attachment_image($logoLg, 'medium'); ?>
+
                         </div><!-- /.inves-icon -->
                     <?php endif; ?>
-                </div><!-- /.investment-img -->
+                </a>
                 <div class="investment-text">
                     <?php if (!empty($logoSm)) : ?>
                         <div class="moja">
