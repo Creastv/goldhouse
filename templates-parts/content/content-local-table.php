@@ -6,9 +6,7 @@ $rooms = get_field('pokoje', get_the_ID());
 $balony = get_field('rozmiar_balkonu', get_the_ID());
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());
-if ($pice):
-    $priceFull =  number_format($price, 0, '', ' ') . ' zł';
-endif;
+
 $plan2d = get_field('rzut_2d', get_the_ID());
 $plan3d = get_field('rzut_3d', get_the_ID());
 $statusInfo = "";
@@ -36,26 +34,27 @@ if ($floor == 0) {
     <td><?php echo $rooms; ?></td>
     <td class="hide-mobile">
         <?php if (!empty($balony)) : ?>
-            <?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?>
+        <?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?>
         <?php else: ?>
-            -
+        -
         <?php endif; ?>
     </td>
     <td><span class="status-<?php echo $statusInfoClass; ?>"><?php echo  $statusInfo; ?></span></td>
     <td class="hide-mobile">
         <?php if (!$plan2d && !$plan3d): ?>
-            -
+        -
         <?php endif; ?>
         <?php if ($plan2d): ?>
-            <a class="download-plan" href="<?php echo $plan2d; ?>" download="<?php the_title(); ?>-2d.jpg">2D</a>
+        <a class="download-plan" href="<?php echo $plan2d; ?>" download="<?php the_title(); ?>-2d.jpg">2D</a>
         <?php endif; ?>
         <?php if ($plan3d): ?>
-            <a class="download-plan" href="<?php echo $plan3d; ?>" download="<?php the_title(); ?>-3d.jpg">3D</a>
+        <a class="download-plan" href="<?php echo $plan3d; ?>" download="<?php the_title(); ?>-3d.jpg">3D</a>
         <?php endif; ?>
 
     </td>
     <td><a href="<?php the_permalink(); ?>" class="price-btn">Zapytaj o cenę</a></td>
-    <td class="hide-mobile" data-order="<?php echo $price; ?>"> <?php echo $price ? $priceFull  : "-"; ?></td>
+    <td class="hide-mobile" data-order="<?php echo $price; ?>">
+        <?php echo $price ?  number_format($price, 2, ',', ' ') . ' zł'  : "-"; ?></td>
     <td class=" hide-mobile">
         <button class="favorite-btn grid-favorite-toggle" data-index="<?php echo get_the_ID(); ?>">
             <svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
