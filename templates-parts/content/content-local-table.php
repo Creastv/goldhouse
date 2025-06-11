@@ -30,25 +30,25 @@ if ($floor == 0) {
 <tr class="odd">
     <td class="sorting_1"><?php the_title(); ?></td>
     <td><?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?></td>
-    <td><?php echo $floor; ?></td>
+    <td><?php echo $floor ? $floor : '-'; ?></td>
     <td><?php echo $rooms; ?></td>
     <td class="hide-mobile">
         <?php if (!empty($balony)) : ?>
-        <?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?>
+            <?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?>
         <?php else: ?>
-        -
+            -
         <?php endif; ?>
     </td>
     <td><span class="status-<?php echo $statusInfoClass; ?>"><?php echo  $statusInfo; ?></span></td>
     <td class="hide-mobile">
         <?php if (!$plan2d && !$plan3d): ?>
-        -
+            -
         <?php endif; ?>
         <?php if ($plan2d): ?>
-        <a class="download-plan" href="<?php echo $plan2d; ?>" download="<?php the_title(); ?>-2d.jpg">2D</a>
+            <a class="download-plan" href="<?php echo $plan2d; ?>" download="<?php the_title(); ?>-2d.jpg">2D</a>
         <?php endif; ?>
         <?php if ($plan3d): ?>
-        <a class="download-plan" href="<?php echo $plan3d; ?>" download="<?php the_title(); ?>-3d.jpg">3D</a>
+            <a class="download-plan" href="<?php echo $plan3d; ?>" download="<?php the_title(); ?>-3d.jpg">3D</a>
         <?php endif; ?>
 
     </td>
