@@ -189,7 +189,7 @@ jQuery(document).ready(function($) {
                 paging: true,
                 lengthChange: false,
                 scrollX: true,
-                pageLength: 100,
+                pageLength: 20,
                 searching: true,
                 ordering: true,
                 info: true,
