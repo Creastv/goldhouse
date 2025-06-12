@@ -140,6 +140,9 @@ function register_acf_block_types()
     'supports' => array('align' => true),
     'enqueue_assets'    => function () {
       wp_enqueue_style('go-filter-home',  get_template_directory_uri() . '/blocks/filter-home/filter-home.min.css');
+      wp_enqueue_script('go-select2', get_template_directory_uri() . '/assets/js/plugins/select2.min.js', array('jquery'), '3', true);
+      wp_enqueue_script('go-filter-home-js', get_template_directory_uri() . '/blocks/filter-home/filter-home.js', ['jquery'], '1.0', true);
+      wp_localize_script('go-filter-home-js', 'ajax_object', ['ajaxurl' => admin_url('admin-ajax.php')]);
     },
   ));
 
@@ -158,6 +161,13 @@ function register_acf_block_types()
     'supports' => array('align' => true),
     'enqueue_assets'    => function () {
       wp_enqueue_style('go-filter-inv',  get_template_directory_uri() . '/blocks/filter-inv/filter-inv.min.css');
+      wp_enqueue_script('go-select2', get_template_directory_uri() . '/assets/js/plugins/select2.min.js', array('jquery'), '3', true);
+      wp_enqueue_script('go-range-slider', get_template_directory_uri() . '/assets/js/plugins/ion.rangeSlider.min.js', array('jquery'), '3', true);
+      wp_enqueue_script('go-datatabel', 'https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js', array('jquery'), '3', true);
+      wp_enqueue_script('go-archive-filters', get_template_directory_uri() . '/assets/js/archive-filters.js', array('jquery'), null, true);
+      wp_localize_script('go-archive-filters', 'ajax_vars', [
+        'ajax_url' => admin_url('admin-ajax.php')
+      ]);
     },
   ));
 
@@ -234,23 +244,6 @@ function register_acf_block_types()
     'enqueue_assets'    => function () {
       wp_enqueue_style('go-counter',  get_template_directory_uri() . '/blocks/counter/counter.min.css');
       wp_enqueue_script('go-counter-js', get_template_directory_uri() . '/blocks/counter/counter.js', array('jquery'), '20', true);
-    },
-  ));
-  acf_register_block_type(array(
-    'name'              => 'calc',
-    'title'             => __('Kalkulator kredytowy'),
-    'render_template'   => 'blocks/calc/calc.php',
-    'category'          => 'formatting',
-    'icon' => array(
-      'background' => '#c80100',
-      'foreground' => '#fff',
-      'src' => 'ellipsis',
-    ),
-    'mode'            => 'preview',
-    'keywords'          => array('calc'),
-    'supports' => array('align' => true),
-    'enqueue_assets'    => function () {
-      wp_enqueue_style('go-calc',  get_template_directory_uri() . '/blocks/calc/calc.min.css');
     },
   ));
   acf_register_block_type(array(

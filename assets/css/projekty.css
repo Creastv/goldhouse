@@ -112,8 +112,8 @@ h2.projekt-name {
 .details-item {
   color: #868686;
   position: relative;
-  padding-left: 50px;
-  margin-bottom: 40px;
+  /* padding-left: 50px; */
+  margin-bottom: 20px;
 }
 
 .details-item::before {

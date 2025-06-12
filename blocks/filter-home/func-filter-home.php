@@ -140,10 +140,3 @@ function update_filters_callback_home()
 
     wp_send_json_success($response);
 }
-
-
-// Rejestracja JS i ajaxurl
-add_action('wp_enqueue_scripts', function () {
-    wp_enqueue_script('go-filter-home-js', get_template_directory_uri() . '/blocks/filter-home/filter-home.js', ['jquery'], '1.0', true);
-    wp_localize_script('go-filter-home-js', 'ajax_object', ['ajaxurl' => admin_url('admin-ajax.php')]);
-});

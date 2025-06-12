@@ -6,8 +6,6 @@
 $(document).ready(function () {
   "use strict";
   // Scroll To Top
-
-
   $(window).scroll(function () {
     if ($(window).scrollTop() > 500) {
       $(".go-top").fadeIn(600);
@@ -81,8 +79,6 @@ $(document).ready(function () {
     }
   });
 });
-
-
 })(jQuery);
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -101,15 +97,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-
-
 const calaps = document.querySelectorAll(".calaps");
 for (let i = 0; i < calaps.length; i++) {
   calaps[i].querySelector(".calaps__opener").addEventListener("click", function () {
     calaps[i].classList.toggle("active");
   });
 }
-
 
 if (jQuery(window).width() > 500) {
   jQuery('.go-parallex').paroller({

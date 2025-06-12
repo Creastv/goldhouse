@@ -44,7 +44,11 @@ jQuery(document).ready(function($) {
 
     // Odpalamy updateFiltersHome dla selectów
     $('select[name="investment"], select[name="location"]').on('change', updateFiltersHome);
-
+  $(".select2").select2({
+            placeholder: "Wybierz opcję",
+            allowClear: true,
+            
+        });
     // Obsługa kliknięcia w pokoje
     $(document).on('click', '.room-btn--home[data-rooms]', function() {
         var room = $(this).data('rooms');

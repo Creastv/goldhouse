@@ -1,6 +1,7 @@
 <?php
 function lokale_favorites_shortcode()
 {
+    wp_enqueue_script('go-wishlist', get_template_directory_uri() . '/assets/js/wishlist.js', array('jquery'), '3', true);
     ob_start();
 ?>
     <div id="favorite-lokale-list"></div>
