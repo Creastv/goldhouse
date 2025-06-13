@@ -42,7 +42,7 @@ endif;
     L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
         subdomains: "abcd",
-        maxZoom: <?php echo $zoom; ?>,
+        // maxZoom: 16,
     }).addTo(map);
     const olszankowaArea = L.circle([<?php echo $loc['lat']; ?>, <?php echo $loc['lng']; ?>], {
         // Adjusted longitude to move left
@@ -67,7 +67,7 @@ endif;
 
     // // Add the logo as a separate marker
     const logoIcon = L.icon({
-        iconUrl: "<?php echo $pin ? $pin : get_template_directory_uri() . '/assets/img/map/map-marker-2.svg'; ?>",
+        iconUrl: "<?php echo $pin ? $pin : get_template_directory_uri() . '/assets/img/map/map-marker-1.svg'; ?>",
         iconSize: [47, 47],
         iconAnchor: [23, 23],
         popupAnchor: [0, 0],
