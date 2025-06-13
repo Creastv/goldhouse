@@ -1,20 +1,22 @@
 <?php
 $experts = get_field('specjalisci', 'options');
-foreach ($experts as $investition) {
-    $contact = get_field('kontakt', $investition);
-    if ($contact) :
-        $logo = $contact['logo'] ?? '';
-        $name = $contact['nazwa'] ?? '';
-        $address = $contact['adres'] ?? '';
-        $mapLink = $contact['link_do_mapy'] ?? '';
-        $link = $contact['link'] ?? '';
-        if ($link):
-            $link_url = $link['url'];
-            $link_title = $link['title'];
-            $link_target = $link['target'] ? $link['target'] : '_self';
+if ($experts) :
+    foreach ($experts as $investition) {
+        $contact = get_field('kontakt', $investition);
+        if ($contact) :
+            $logo = $contact['logo'] ?? '';
+            $name = $contact['nazwa'] ?? '';
+            $address = $contact['adres'] ?? '';
+            $mapLink = $contact['link_do_mapy'] ?? '';
+            $link = $contact['link'] ?? '';
+            if ($link):
+                $link_url = $link['url'];
+                $link_title = $link['title'];
+                $link_target = $link['target'] ? $link['target'] : '_self';
+            endif;
         endif;
-    endif;
-}
+    }
+endif;
 $nextxperts = get_field('dodatkowi_specjalisci', 'options');
 
 
