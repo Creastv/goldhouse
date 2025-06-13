@@ -343,3 +343,24 @@ add_action('admin_init', function () {
         exit;
     }
 });
+
+
+
+add_action('wp_footer', function () {
+    // Upewnij się, że to ładuje się *po* załadowaniu CF7 scripts
+?>
+    <script>
+        // Dla klasycznego ładowania strony:
+        document.addEventListener('DOMContentLoaded', function() {
+            var el = document.getElementById('cf7-page-title');
+            if (el) el.value = document.title;
+        });
+
+        // Dla formularzy AJAX (CF7): przed każdym wysłaniem
+        document.addEventListener('wpcf7beforesubmit', function(event) {
+            var el = event.target.querySelector('#cf7-page-title');
+            if (el) el.value = document.title;
+        }, false);
+    </script>
+<?php
+});
