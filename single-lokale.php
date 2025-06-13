@@ -10,7 +10,7 @@ $rooms = get_field('pokoje', get_the_ID());
 
 $balcony = get_field('rozmiar_balkonu', get_the_ID());
 $terrace = get_field('rozmiar_tarasu', get_the_ID());
-$terraceBalcony = get_field('rozmiar_tarasu', get_the_ID());
+$terraceBalcony = get_field('rozmiar_ogrodei_taras', get_the_ID());
 
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());

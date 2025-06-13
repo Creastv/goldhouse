@@ -10,7 +10,7 @@ $plan2d = get_field('rzut_2d');
 
 $balcony = get_field('rozmiar_balkonu', get_the_ID());
 $terrace = get_field('rozmiar_tarasu', get_the_ID());
-$terraceBalcony = get_field('rozmiar_tarasu', get_the_ID());
+$terraceBalcony = get_field('rozmiar_ogrodei_taras', get_the_ID());
 
 
 $statusInfo = "";
