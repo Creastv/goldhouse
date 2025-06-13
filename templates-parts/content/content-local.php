@@ -92,7 +92,7 @@ if ($floor == 0) {
             <?php endif; ?>
             <?php if (!empty($terraceBalcony)) : ?>
                 <div class="info-row">
-                    <div class="info-label">BOgródek i taras</div>
+                    <div class="info-label">Ogródek i taras</div>
                     <div class="info-value">
                         <?php echo $terraceBalcony; ?> m²
                     </div>
