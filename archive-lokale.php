@@ -4,10 +4,8 @@ get_header();
 
 ?>
 <div class="co-12">
-    <?php get_template_part('templates-parts/header/header', 'title-blog'); ?>
+    <?php get_template_part('templates-parts/header/header', 'title-lokale'); ?>
     <?php get_template_part('templates-parts/parts/search-form-filters'); ?>
-
-
 
     <?php if (have_posts()) : ?>
 

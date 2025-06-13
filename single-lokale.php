@@ -7,7 +7,11 @@ $floor = get_field('pietro', get_the_ID());
 $size = get_field('metraz', get_the_ID());
 $stears = get_field('klatka', get_the_ID());
 $rooms = get_field('pokoje', get_the_ID());
-$balony = get_field('rozmiar_balkonu', get_the_ID());
+
+$balcony = get_field('rozmiar_balkonu', get_the_ID());
+$terrace = get_field('rozmiar_tarasu', get_the_ID());
+$terraceBalcony = get_field('rozmiar_tarasu', get_the_ID());
+
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());
 $plan = get_field('plan_mieszkania');
@@ -82,10 +86,22 @@ while (have_posts()) : the_post(); ?>
                                 <p><?php echo $rooms; ?></p>
                             </li>
                         <?php endif; ?>
-                        <?php if (!empty($balony)) : ?>
+                        <?php if (!empty($balcony)) : ?>
                             <li class="details-item item-backyard">
                                 <span>balkon/ogrodek</span>
-                                <p class="leaf"><?php echo $balcony; ?> M<sup>2</sup></p>
+                                <p><?php echo $balcony; ?> M<sup>2</sup></p>
+                            </li>
+                        <?php endif; ?>
+                        <?php if (!empty($terrace)) : ?>
+                            <li class="details-item item-backyard">
+                                <span>Taras</span>
+                                <p><?php echo $terrace; ?> M<sup>2</sup></p>
+                            </li>
+                        <?php endif; ?>
+                        <?php if (!empty($terraceBalcony)) : ?>
+                            <li class="details-item item-backyard">
+                                <span>Ogródek i taras</span>
+                                <p><?php echo $terraceBalcony; ?> M<sup>2</sup></p>
                             </li>
                         <?php endif; ?>
                         <?php if (!empty($status)) : ?>

@@ -6,7 +6,13 @@ $rooms = get_field('pokoje', get_the_ID());
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());
 $plan2d = get_field('rzut_2d');
-$balony = get_field('rozmiar_balkonu', get_the_ID());
+
+
+$balcony = get_field('rozmiar_balkonu', get_the_ID());
+$terrace = get_field('rozmiar_tarasu', get_the_ID());
+$terraceBalcony = get_field('rozmiar_tarasu', get_the_ID());
+
+
 $statusInfo = "";
 $statusInfoClass = "";
 if ($status == 1) :
@@ -68,11 +74,27 @@ if ($floor == 0) {
             <?php endif; ?>
         </div>
         <div class="grid-item-card">
-            <?php if (!empty($balony)) : ?>
+            <?php if (!empty($balcony)) : ?>
                 <div class="info-row">
                     <div class="info-label">BALKON/OGRÓDEK</div>
                     <div class="info-value">
-                        <?php echo $balony; ?> m²
+                        <?php echo $balcony; ?> m²
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($terrace)) : ?>
+                <div class="info-row">
+                    <div class="info-label">BALKON/OGRÓDEK</div>
+                    <div class="info-value">
+                        <?php echo $terrace; ?> m²
+                    </div>
+                </div>
+            <?php endif; ?>
+            <?php if (!empty($terraceBalcony)) : ?>
+                <div class="info-row">
+                    <div class="info-label">BALKON/OGRÓDEK</div>
+                    <div class="info-value">
+                        <?php echo $terraceBalcony; ?> m²
                     </div>
                 </div>
             <?php endif; ?>

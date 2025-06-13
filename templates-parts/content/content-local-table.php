@@ -3,7 +3,13 @@ $budynek = get_field('budynek', get_the_ID());
 $floor = get_field('pietro', get_the_ID());
 $size = get_field('metraz', get_the_ID());
 $rooms = get_field('pokoje', get_the_ID());
-$balony = get_field('rozmiar_balkonu', get_the_ID());
+$balcony = get_field('rozmiar_balkonu', get_the_ID());
+
+$balcony = get_field('rozmiar_balkonu', get_the_ID());
+$terrace = get_field('rozmiar_tarasu', get_the_ID());
+$terraceBalcony = get_field('rozmiar_tarasu', get_the_ID());
+
+
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());
 $plan = get_field('plan_mieszkania', get_the_ID());
@@ -32,12 +38,18 @@ if ($floor == 0) {
     <td><?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?></td>
     <td><?php echo $floor ? $floor : '-'; ?></td>
     <td><?php echo $rooms; ?></td>
-    <td class="hide-mobile">
-        <?php if (!empty($balony)) : ?>
-            <?php echo is_numeric($size) ? number_format((float) $size, 2) . ' m²' : '-'; ?>
+    <td class="hide-mobile balcony">
+
+        <?php if (!empty($balcony)) : ?>
+            <span><?php echo is_numeric($balcony) ? number_format((float) $balcony, 2) . ' m²' : '-'; ?></span>
+        <?php elseif (!empty($terrace)) : ?>
+            <span><?php echo is_numeric($terrace) ? number_format((float) $terrace, 2) . ' m²' : '-'; ?></span>
+        <?php elseif (!empty($terraceBalcony)) : ?>
+            <span><?php echo is_numeric($terraceBalcony) ? number_format((float) $terraceBalcony, 2) . ' m²' : '-'; ?></span>
         <?php else: ?>
             -
         <?php endif; ?>
+
     </td>
     <td><span class="status-<?php echo $statusInfoClass; ?>"><?php echo  $statusInfo; ?></span></td>
     <td class="hide-mobile">
