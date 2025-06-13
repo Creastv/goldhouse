@@ -127,13 +127,13 @@ while (have_posts()) : the_post(); ?>
                 <div class="projekt-plan">
                     <!-- Navigation -->
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <?php if ($plan2d) { ?>
+                        <?php if ($plan2d && $plan3d) { ?>
                             <button class="active" id="nav-tab-lokal" data-bs-toggle="tab" data-bs-target="#tab-1" type="button"
                                 role="tab" aria-controls="tab-1" aria-selected="true">
                                 PLAN 2d
                             </button>
                         <?php } ?>
-                        <?php if ($plan3d) { ?>
+                        <?php if ($plan3d && $plan2d) { ?>
                             <button class="" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#tab-2" type="button"
                                 role="tab" aria-controls="tab-2" aria-selected="false">
                                 RZUT 3D

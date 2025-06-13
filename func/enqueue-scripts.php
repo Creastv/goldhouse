@@ -21,6 +21,7 @@ function enqueue_scripts()
 		]);
 	}
 	if (is_singular('lokale')) {
+		wp_enqueue_script('go-wishlist-js', get_template_directory_uri() . '/assets/js/wishlist.js', array('jquery'), null, true);
 		wp_enqueue_script('go-gallery-js', get_template_directory_uri() . '/assets/js/local-gallery.js', array('jquery'), null, true);
 		wp_localize_script('go-gallery-js', 'go_gallery_ajax', array(
 			'ajaxurl' => admin_url('admin-ajax.php'),
