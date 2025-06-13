@@ -147,7 +147,7 @@ endif;
                                 <?php if ($name) : ?>
                                     <span><?php echo $name; ?></span>
                                 <?php endif; ?>
-                            </div><!-- /.biuro-aria -->
+                            </div>
                             <?php if ($address) : ?>
                                 <div class="expert-location">
                                     <?php if ($mapLink) : ?>

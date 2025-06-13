@@ -23,17 +23,17 @@ if (is_home() || is_search() || is_category() || is_tax() ||  is_post_type_archi
                         <a href=" <?php echo esc_url(home_url('/')); ?>">
                             <img class="inactive"
                                 src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-active.png"
-                                alt="ARIA Development">
+                                alt="GoldHouse">
                             <img class="active"
                                 src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-active.png"
-                                alt="ARIA Development">
+                                alt="GoldHouse">
                         </a>
                     </div>
                 </div>
                 <div class="col-8 col-lg-8">
                     <div class="header-right">
                         <div class="nav-icons  d-md-flex">
-                            <a href="#" class="nav-icon search-toggle">
+                            <a href="/lokale/" class="nav-icon">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_9844_211)">
