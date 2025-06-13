@@ -61,6 +61,7 @@
 
 .irs--flat {
   height: 44px;
+  padding: 0 8px;
 }
 
 .irs--flat .irs-handle {
@@ -118,7 +119,7 @@
   font-size: var(--xs);
   font-weight: 500;
   line-height: 1.71;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   display: block;
 }
 
@@ -408,8 +409,26 @@
   .search-inner {
     padding: 15px;
   }
+  #advancedSearch .w-100  div{
+   width: 100%;
+  }
+  #advancedSearch .w-100  div  .filter-2{
+      padding-right: 15px;
+  }
+  .#advancedSearch .w-100{
+    gap: 0 5px!important;
+  }
   #advancedSearch {
    display: none;
+  }
+  .select2-container {
+    width: 100% !important;
+  }
+  .form-label {
+    margin-top:10px;
+  }
+  .filter-floors{
+    margin-bottom: 10px;
   }
 }
 

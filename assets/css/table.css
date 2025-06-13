@@ -89,8 +89,9 @@ table.dataTable.no-footer {
   cursor: pointer;
   width: 100%;
   border-radius: 12px;
-  line-height: 38px;
+  line-height:1;
   font-size: 14px;
+  padding: 10px;
   z-index: 2;
   text-align: center;
 }
@@ -587,10 +588,8 @@ table.dataTable.display tbody tr.odd {
 
 }
 .price-btn {
-  white-space: nowrap;
   font-size: 12px;
-  padding: 0 10px;
-  line-height: 27px;
+  padding: 10 10px;
 }
 }
 
