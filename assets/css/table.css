@@ -62,7 +62,9 @@ table.dataTable.display tbody td {
 table.dataTable.no-footer {
   border: 0;
 }
-
+table.dataTable td, table.dataTable th{
+  text-align: center!important;
+}
 .status-available {
   color: #54a715;
 }
@@ -206,6 +208,10 @@ table.dataTable thead td {
 }
 .dataTable a:hover{
   color:var(--main);
+}
+.dataTable svg:hover path{
+  stroke:none!important;
+  fill:var(--main);
 }
 /* Grid View */
 

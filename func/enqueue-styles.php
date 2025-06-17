@@ -26,7 +26,8 @@ function enqueue_styles()
     wp_enqueue_style('slick-theme', $theme_uri  . '/assets/css/plugins/slick-theme.min.css');
     wp_enqueue_style('leaflet', $theme_uri  . '/assets/css/plugins/leaflet.css');
     wp_enqueue_style('fancybox', $theme_uri  . '/assets/css/plugins/fancybox.css');
-    wp_enqueue_style('data-table', 'https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css');
+    wp_enqueue_style('data-table', 'https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css');
+    wp_enqueue_style('data-table-fixed', 'https://cdn.datatables.net/fixedheader/4.0.1/css/fixedHeader.dataTables.min.css');
 
 
     // Custom styles

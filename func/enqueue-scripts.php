@@ -12,7 +12,8 @@ function enqueue_scripts()
 	wp_enqueue_script('go-fancybox', get_template_directory_uri() . '/assets/js/plugins/fancybox.min.js', array('jquery'), '3', true);
 
 	if (is_post_type_archive('lokale')) {
-		wp_enqueue_script('go-datatabel', 'https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js', array('jquery'), '3', true);
+		wp_enqueue_script('go-datatabel', 'https://cdn.datatables.net/2.0.3/js/dataTables.min.js', array('jquery'), '3', true);
+		wp_enqueue_script('go-datatable-fixed-header', 'https://cdn.datatables.net/fixedheader/4.0.1/js/dataTables.fixedHeader.min.js', array('jquery'), '3', true);
 		wp_enqueue_script('go-select2', get_template_directory_uri() . '/assets/js/plugins/select2.min.js', array('jquery'), '3', true);
 		wp_enqueue_script('go-range-slider', get_template_directory_uri() . '/assets/js/plugins/ion.rangeSlider.min.js', array('jquery'), '3', true);
 		wp_enqueue_script('go-archive-filters', get_template_directory_uri() . '/assets/js/archive-filters.js', array('jquery'), null, true);

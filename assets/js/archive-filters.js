@@ -185,15 +185,20 @@ jQuery(document).ready(function($) {
 
     function initDataTableIfExists() {
         if (jQuery.fn.DataTable && jQuery("#dataTable").length) {
+
             jQuery("#dataTable").DataTable({
                 paging: false,
                 lengthChange: false,
                 scrollX: true,
                 pageLength: -1,
-                searching: true,
+                searching:false,
                 ordering: true,
                 info: true,
                 autoWidth: false,
+                fixedHeader: {
+                header: true,
+                headerOffset:  132
+                },
                 language: {
                     paginate: {
                         previous: '<span class="prev-icon">< Poprzednia</span>',

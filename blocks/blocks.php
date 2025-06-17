@@ -163,7 +163,8 @@ function register_acf_block_types()
       wp_enqueue_style('go-filter-inv',  get_template_directory_uri() . '/blocks/filter-inv/filter-inv.min.css');
       wp_enqueue_script('go-select2', get_template_directory_uri() . '/assets/js/plugins/select2.min.js', array('jquery'), '3', true);
       wp_enqueue_script('go-range-slider', get_template_directory_uri() . '/assets/js/plugins/ion.rangeSlider.min.js', array('jquery'), '3', true);
-      wp_enqueue_script('go-datatabel', 'https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js', array('jquery'), '3', true);
+      wp_enqueue_script('go-datatabel', 'https://cdn.datatables.net/2.0.3/js/dataTables.min.js', array('jquery'), '3', true);
+      wp_enqueue_script('go-datatable-fixed-header', 'https://cdn.datatables.net/fixedheader/4.0.1/js/dataTables.fixedHeader.min.js', array('jquery'), '3', true);
       wp_enqueue_script('go-archive-filters', get_template_directory_uri() . '/assets/js/archive-filters.js', array('jquery'), null, true);
       wp_localize_script('go-archive-filters', 'ajax_vars', [
         'ajax_url' => admin_url('admin-ajax.php')
