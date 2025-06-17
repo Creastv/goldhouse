@@ -18,7 +18,7 @@ endif;
                         <div class="footer-top">
                             <div class="footer-logo">
                                 <a href="#"><img
-                                        src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer.png"
+                                        src="<?php echo get_template_directory_uri(); ?>/assets/img/logo-footer2.png"
                                         alt="logo"></a>
                             </div><!-- /.footer-logo -->
                             <?php if ($displaySome) : ?>
