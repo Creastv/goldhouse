@@ -197,7 +197,7 @@ jQuery(document).ready(function($) {
                 pageLength: -1,
                 searching:false,
                 ordering: true,
-                info: true,
+                info: false,
                 autoWidth: false,
                 fixedHeader: {
                 header: true,
