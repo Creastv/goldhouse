@@ -104,12 +104,16 @@
     padding: 10px;
   }
   .content-inner-1 .content-card {
-    width: calc(33.33% - 10px);
+    width: calc(50% - 10px);
   }
   .content-inner-2 .content-card {
-    width: calc(33.33% - 10px);
+    width: calc(50% - 10px);
   }
   .content-inner-3 .content-card {
-    width: calc(33.33% - 10px);
+    width: calc(50% - 10px);
+  }
+  .content-inner.size-1 .content-text p {
+    line-height: 1.1;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=bullets.css.map */
