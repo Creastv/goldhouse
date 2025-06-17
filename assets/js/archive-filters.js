@@ -185,6 +185,10 @@ jQuery(document).ready(function($) {
 
     function initDataTableIfExists() {
         if (jQuery.fn.DataTable && jQuery("#dataTable").length) {
+            let top = 132
+             if (window.innerWidth < 991) {
+                top = 80
+             }
 
             jQuery("#dataTable").DataTable({
                 paging: false,
@@ -197,7 +201,7 @@ jQuery(document).ready(function($) {
                 autoWidth: false,
                 fixedHeader: {
                 header: true,
-                headerOffset:  132
+                headerOffset:  top
                 },
                 language: {
                     paginate: {
