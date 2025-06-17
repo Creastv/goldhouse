@@ -48,7 +48,6 @@ $(document).ready(function () {
   $(document).ready(function () {
     // Ustaw padding-top na start
 
-
     // Zaktualizuj padding-top przy zmianie rozmiaru okna
     $(window).on("resize", adjustBodyPadding);
 

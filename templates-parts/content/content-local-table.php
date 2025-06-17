@@ -84,7 +84,7 @@ if ($floor == 0) {
 
 
     </td>
-    <td><a href="<?php the_permalink(); ?>" class="price-btn">Zapytaj o cenę</a></td>
+    <td><a href="<?php the_permalink(); ?>" class="price-btn">Zapytaj</a></td>
     <td class="hide-mobile" data-order="<?php echo $price; ?>">
         <?php echo $price ?  number_format($price, 2, ',', ' ') . ' zł'  : "-"; ?></td>
     <td class=" hide-mobile">
