@@ -592,6 +592,9 @@ table.dataTable.display tbody tr.odd {
   display: block;
 
 }
+#dataTable colgroup{
+  display: none!important;
+}
  .price-btn::before, .price-btn::after{
 border-radius: 2px;
   }
