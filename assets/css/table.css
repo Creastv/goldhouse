@@ -77,7 +77,9 @@ table.dataTable td, table.dataTable th{
 .status-sold {
   color: red;
 }
-
+.price-mobile{
+  display: none;
+}
 .price-btn {
   position: relative;
   display: inline-block;
@@ -590,9 +592,16 @@ table.dataTable.display tbody tr.odd {
   display: block;
 
 }
-.price-btn {
+ .price-btn::before, .price-btn::after{
+border-radius: 2px;
+  }
+  .price-btn {
   font-size: 12px;
-  padding: 10 10px;
+  padding: 5px 2px;
+}
+.price-mobile{
+  display: block;
+  white-space: nowrap;
 }
 }
 
@@ -610,6 +619,7 @@ table.dataTable.display tbody tr.odd {
   .grid-item {
     width: 100%;
   }
+
 }
 
 

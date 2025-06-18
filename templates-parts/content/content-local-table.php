@@ -51,7 +51,9 @@ if ($floor == 0) {
         <?php endif; ?>
 
     </td>
-    <td><span class="status-<?php echo $statusInfoClass; ?>"><?php echo  $statusInfo; ?></span></td>
+    <td><span class="status-<?php echo $statusInfoClass; ?>"><?php echo  $statusInfo; ?></span><br><span
+            class="price-mobile"><?php echo $price ?  number_format($price, 2, ',', ' ') . ' zł'  : "-"; ?></span>
+    </td>
     <td class="hide-mobile">
         <?php if (!$plan2d && !$plan3d): ?>
             -
