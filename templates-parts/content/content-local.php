@@ -104,6 +104,13 @@ if ($floor == 0) {
                     <div class="info-value status-<?php echo $statusInfoClass; ?>"><?php echo  $statusInfo; ?></div>
                 </div>
             <?php endif; ?>
+            <?php if (!empty($price)) : ?>
+                <div class="info-row">
+                    <div class="info-label ">Cena</div>
+                    <div class="info-value">
+                        <?php echo $price ?  number_format($price, 2, ',', ' ') . ' zł'  : "-"; ?></div>
+                </div>
+            <?php endif; ?>
         </div>
     </div>
 
