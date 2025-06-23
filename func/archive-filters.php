@@ -42,6 +42,8 @@ function filter_lokale_query($query)
         if (!empty($meta_query)) {
             $query->set('meta_query', $meta_query);
         }
+        $query->set('orderby', 'title'); // sortowanie po nazwie
+        $query->set('order', 'ASC');     // rosnąco
     }
 }
 add_action('pre_get_posts', 'filter_lokale_query');
@@ -58,13 +60,9 @@ function ajax_filter_lokale()
         'posts_per_page' => ($view === 'grid') ? -1 : -1,
         'paged'          => $paged,
         'post_status'    => 'publish',
+        'orderby'        => 'title', // sortowanie po nazwie
+        'order'          => 'ASC',   // rosnąco
     ];
-
-    // Dodaj sortowanie po nazwie dla widoku grid
-    if ($view === 'grid') {
-        $args['orderby'] = 'title';
-        $args['order'] = 'ASC';
-    }
 
     $meta_query = [];
 
@@ -200,6 +198,8 @@ function ajax_get_investment_filters()
         'posts_per_page' => -1,
         'post_status'    => 'publish',
         'meta_query'     => [],
+        'orderby'        => 'title', // sortowanie po nazwie
+        'order'          => 'ASC',   // rosnąco
     ];
     if ($investment) {
         $args_all['meta_query'][] = [
