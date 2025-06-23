@@ -60,6 +60,12 @@ function ajax_filter_lokale()
         'post_status'    => 'publish',
     ];
 
+    // Dodaj sortowanie po nazwie dla widoku grid
+    if ($view === 'grid') {
+        $args['orderby'] = 'title';
+        $args['order'] = 'ASC';
+    }
+
     $meta_query = [];
 
     if (!empty($_POST['investment'])) {
