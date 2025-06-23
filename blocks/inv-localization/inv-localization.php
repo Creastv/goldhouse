@@ -80,31 +80,29 @@ endif;
     }).addTo(map);
 
     // Add POI markers with specific icons
-    const pois = [
-        <?php foreach ($poi as $po) { ?> {
-                // icon: transportIcon,
-                name: '<?php echo $po['nazwa_punktu']; ?>',
-                position: [<?php echo $po['mapa']['lat']; ?>, <?php echo $po['mapa']['lng']; ?>],
-                icon: L.icon({
-                    iconUrl: '<?php echo $po['ikona']; ?>',
-                    iconAnchor: [12, 41],
-                    popupAnchor: [0, -41]
-                })
-            },
-        <?php } ?>
-        //{
-        //     position: [52.3135, 20.9753],
-        //     name: "Przystanek autobusowy",
-        //     icon: transportIcon,
-        // },
-    ];
-
+    <?php if ($poi) : ?>
+        const pois = [
+            <?php foreach ($poi as $po) { ?> {
+                    // icon: transportIcon,
+                    name: '<?php echo $po['nazwa_punktu']; ?>',
+                    position: [<?php echo $po['mapa']['lat']; ?>, <?php echo $po['mapa']['lng']; ?>],
+                    icon: L.icon({
+                        iconUrl: '<?php echo $po['ikona']; ?>',
+                        iconAnchor: [12, 41],
+                        popupAnchor: [0, -41]
+                    })
+                },
+            <?php } ?>
+        ];
+    <?php endif; ?>
     // Add all POI markers to the map with their specific icons
-    pois.forEach((poi) => {
-        L.marker(poi.position, {
-                icon: poi.icon
-            })
-            .addTo(map)
-            .bindPopup(`<b>${poi.name}</b>`);
-    });
+    <?php if ($poi) : ?>
+        pois.forEach((poi) => {
+            L.marker(poi.position, {
+                    icon: poi.icon
+                })
+                .addTo(map)
+                .bindPopup(`<b>${poi.name}</b>`);
+        });
+    <?php endif; ?>
 </script>
