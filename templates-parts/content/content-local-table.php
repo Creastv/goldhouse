@@ -55,9 +55,6 @@ if ($floor == 0) {
             class="price-mobile"><?php echo $price ?  number_format($price, 2, ',', ' ') . ' zł'  : "-"; ?></span>
     </td>
     <td class="hide-mobile">
-        <?php if (!$plan2d && !$plan3d): ?>
-            -
-        <?php endif; ?>
         <?php if ($plan): ?>
             <a class="download-plan" href="<?php echo $plan; ?>" target="_blank">
                 <svg width="23" height="25" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
