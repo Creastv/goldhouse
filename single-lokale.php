@@ -141,7 +141,11 @@ while (have_posts()) : the_post(); ?>
                 <div class="projekt-plan">
                     <!-- Navigation -->
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <?php if ($plan2d) { ?>
+                        <?php if (
+                            $plan2d && (
+                                $plan3d || $imgZdjParter || $imgZdjPietro
+                            )
+                        ) { ?>
                             <button class="<?php echo $activeTab === 'tab-1' ? 'active' : ''; ?>" id="nav-tab-lokal"
                                 data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1"
                                 aria-selected="<?php echo $activeTab === 'tab-1' ? 'true' : 'false'; ?>">
