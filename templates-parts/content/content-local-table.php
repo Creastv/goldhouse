@@ -79,6 +79,8 @@ if ($floor == 0) {
                     </defs>
                 </svg>
             </a>
+        <?php else: ?>
+            -
         <?php endif; ?>
 
 
