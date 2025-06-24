@@ -5,7 +5,9 @@ $size = get_field('metraz', get_the_ID());
 $rooms = get_field('pokoje', get_the_ID());
 $status = get_field('status', get_the_ID());
 $price = get_field('cena', get_the_ID());
-$plan2d = get_field('rzut_2d');
+$plan2d = get_field('rzut_2d', get_the_ID());
+$imgZdjParter = get_field('plan_parter', get_the_ID());
+$imgZdjPietro = get_field('plan_pietro', get_the_ID());
 
 
 $balcony = get_field('rozmiar_balkonu', get_the_ID());
@@ -47,7 +49,11 @@ if ($floor == 0) {
     </div>
     <a href="<?php the_permalink(); ?>">
         <?php if ($plan2d) { ?>
-            <img src='<?php echo $plan2d; ?>' alt='Plan lokalu'>
+            <img src='<?php echo $plan2d; ?>' alt='<?php the_title(); ?>'>
+        <?php } elseif ($imgZdjParter) { ?>
+            <img src='<?php echo $imgZdjParter; ?>' alt='<?php the_title(); ?>'>
+        <?php } elseif ($imgZdjPietro) { ?>
+            <img src='<?php echo $imgZdjPietro; ?>' alt='<?php the_title(); ?>'>
         <?php } else { ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/local.png" alt="Floor plan">
         <?php } ?>

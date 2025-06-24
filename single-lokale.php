@@ -17,6 +17,20 @@ $price = get_field('cena', get_the_ID());
 $plan = get_field('plan_mieszkania');
 $plan2d = get_field('rzut_2d');
 $plan3d = get_field('rzut_3d');
+
+$imgZdjParter = get_field('plan_parter', get_the_ID());
+$imgZdjPietro = get_field('plan_pietro', get_the_ID());
+
+// Ustal aktywny tab
+$activeTab = '';
+if ($plan2d) {
+    $activeTab = 'tab-1';
+} elseif ($imgZdjParter) {
+    $activeTab = 'tab-3';
+} elseif ($imgZdjPietro) {
+    $activeTab = 'tab-4';
+}
+
 $statusInfo = "";
 $statusInfoClass = "";
 if ($status == 1) :
@@ -127,16 +141,32 @@ while (have_posts()) : the_post(); ?>
                 <div class="projekt-plan">
                     <!-- Navigation -->
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                        <?php if ($plan2d && $plan3d) { ?>
-                            <button class="active" id="nav-tab-lokal" data-bs-toggle="tab" data-bs-target="#tab-1" type="button"
-                                role="tab" aria-controls="tab-1" aria-selected="true">
+                        <?php if ($plan2d) { ?>
+                            <button class="<?php echo $activeTab === 'tab-1' ? 'active' : ''; ?>" id="nav-tab-lokal"
+                                data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1"
+                                aria-selected="<?php echo $activeTab === 'tab-1' ? 'true' : 'false'; ?>">
                                 PLAN 2d
                             </button>
                         <?php } ?>
                         <?php if ($plan3d && $plan2d) { ?>
-                            <button class="" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#tab-2" type="button"
-                                role="tab" aria-controls="tab-2" aria-selected="false">
+                            <button class="<?php echo $activeTab === 'tab-2' ? 'active' : ''; ?>" id="nav-contact-tab"
+                                data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2"
+                                aria-selected="<?php echo $activeTab === 'tab-2' ? 'true' : 'false'; ?>">
                                 RZUT 3D
+                            </button>
+                        <?php } ?>
+                        <?php if ($imgZdjParter) { ?>
+                            <button class="<?php echo $activeTab === 'tab-3' ? 'active' : ''; ?>" id="nav-tab-parter"
+                                data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3"
+                                aria-selected="<?php echo $activeTab === 'tab-3' ? 'true' : 'false'; ?>">
+                                Parter
+                            </button>
+                        <?php } ?>
+                        <?php if ($imgZdjPietro) { ?>
+                            <button class="<?php echo $activeTab === 'tab-4' ? 'active' : ''; ?>" id="nav-tab-pietro"
+                                data-bs-toggle="tab" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4"
+                                aria-selected="<?php echo $activeTab === 'tab-4' ? 'true' : 'false'; ?>">
+                                Piętro
                             </button>
                         <?php } ?>
                         <?php if ($plan) { ?>
@@ -153,25 +183,42 @@ while (have_posts()) : the_post(); ?>
                     </div>
                     <div class=" plan-image-container">
                         <div class="tab-content" id="nav-tabContent">
-                            <div class="tab-pane fade active show" id="tab-1" role="tabpanel"
-                                aria-labelledby="nav-tab-lokal">
-                                <?php if ($plan2d) { ?>
+                            <?php if ($plan2d) { ?>
+                                <div class="tab-pane fade <?php echo $activeTab === 'tab-1' ? 'active show' : ''; ?>" id="tab-1"
+                                    role="tabpanel" aria-labelledby="nav-tab-lokal">
                                     <a data-fancybox="gallery" href="<?php echo $plan2d; ?>">
                                         <img src='<?php echo $plan2d; ?>'
                                             alt='<?php echo $invName; ?> - <?php the_title(); ?> - Plan'
                                             style='max-width:100%;'>
                                     </a>
-                                <?php } else { ?>
-                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/local.png"
-                                        alt="Floor plan">
-                                <?php } ?>
-                                <!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/projekty/rzut-2d.png" alt="image"> -->
-                            </div>
-                            <?php if ($plan3d) { ?>
-                                <div class="tab-pane fade " id="tab-2" role="tabpanel" aria-labelledby="nav-tab-lokal">
+                                </div>
+                            <?php } ?>
+                            <?php if ($plan3d && $plan2d) { ?>
+                                <div class="tab-pane fade <?php echo $activeTab === 'tab-2' ? 'active show' : ''; ?>" id="tab-2"
+                                    role="tabpanel" aria-labelledby="nav-contact-tab">
                                     <a data-fancybox="gallery" href="<?php echo $plan3d; ?>">
                                         <img src='<?php echo $plan3d; ?>'
                                             alt='<?php echo $invName; ?> - <?php the_title(); ?> - Plan 3D'
+                                            style='max-width:100%;'>
+                                    </a>
+                                </div>
+                            <?php } ?>
+                            <?php if ($imgZdjParter) { ?>
+                                <div class="tab-pane fade <?php echo $activeTab === 'tab-3' ? 'active show' : ''; ?>" id="tab-3"
+                                    role="tabpanel" aria-labelledby="nav-tab-parter">
+                                    <a data-fancybox="gallery" href="<?php echo $imgZdjParter; ?>">
+                                        <img src='<?php echo $imgZdjParter; ?>'
+                                            alt='<?php echo $invName; ?> - <?php the_title(); ?> - Plan'
+                                            style='max-width:100%;'>
+                                    </a>
+                                </div>
+                            <?php } ?>
+                            <?php if ($imgZdjPietro) { ?>
+                                <div class="tab-pane fade <?php echo $activeTab === 'tab-4' ? 'active show' : ''; ?>" id="tab-4"
+                                    role="tabpanel" aria-labelledby="nav-tab-pietro">
+                                    <a data-fancybox="gallery" href="<?php echo $imgZdjPietro; ?>">
+                                        <img src='<?php echo $imgZdjPietro; ?>'
+                                            alt='<?php echo $invName; ?> - <?php the_title(); ?> - Plan'
                                             style='max-width:100%;'>
                                     </a>
                                 </div>
