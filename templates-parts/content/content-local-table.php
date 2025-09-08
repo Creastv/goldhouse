@@ -48,7 +48,7 @@ if ($floor == 0) {
             <span><?php echo is_numeric($terraceBalcony) ? number_format((float) $terraceBalcony, 2) . ' m²' : '-'; ?></span>
         <?php else: ?>
             -
-        <?php endif; ?>
+        <?php endif; ?><br>
         <?php echo do_shortcode('[lokal_accessories id="' . get_the_ID() . '" label="Przynależności >" class="" tag="a"]'); ?>
 
     </td>
